@@ -14,6 +14,7 @@ License: GPL
 Group: File tools
 Source: %{name}-%{rversion}-elm%{extra_ver}.tar.bz2 
 Url: http://www.havens.de/elm/emelfm.html
+BuildRoot: %{_tmppath}/%{name}-buildroot
 BuildRequires: gtk+-devel >= 1.2
 Requires: gtk+ >= 1.2
 Requires: xterm
