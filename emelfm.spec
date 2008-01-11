@@ -59,15 +59,15 @@ rm -rf $RPM_BUILD_ROOT%_docdir/help.txt
  
 
 (cd $RPM_BUILD_ROOT 
-mkdir -p   ./usr/lib/menu
- cat > %{buildroot}%{_menudir}/%{name} << EOF
-?package(%{name}):\
-command="%{name}"\
-title="Emelfm"\
-longtitle="A GTK file manager"\
-needs="x11"\
-icon="file_tools_section.png"\
-section="System/File Tools"
+mkdir -p   $RPM_BUILD_ROOT%{_menudir}
+ cat << EOF > %buildroot%{_datadir}/applications/mandriva-%{name}.desktop
+[Desktop Entry]
+Type=Application
+Exec=%{name}
+Name=Emelfm
+Comment=A GTK file manager
+Icon=file_tools_section
+Categories=X-MandrivaLinux-System-FileTools;System;
 EOF
 )
 
