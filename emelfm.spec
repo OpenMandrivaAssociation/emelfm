@@ -74,11 +74,15 @@ EOF
 %find_lang %name
 
 %post
+%if %mdkversion < 200900
 /sbin/ldconfig
+%endif
 %{update_menus}      
 
 %postun
+%if %mdkversion < 200900
 /sbin/ldconfig
+%endif
 %{clean_menus}
 
 %clean
