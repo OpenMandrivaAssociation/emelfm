@@ -58,8 +58,7 @@ make BIN_DIR=$RPM_BUILD_ROOT%{_bindir} DOC_DIR=$RPM_BUILD_ROOT%_docdir \
 rm -rf $RPM_BUILD_ROOT%_docdir/help.txt
  
 
-(cd $RPM_BUILD_ROOT 
-mkdir -p   $RPM_BUILD_ROOT%{_menudir}
+mkdir -p   %buildroot%{_datadir}/applications/
  cat << EOF > %buildroot%{_datadir}/applications/mandriva-%{name}.desktop
 [Desktop Entry]
 Type=Application
@@ -69,7 +68,6 @@ Comment=A GTK file manager
 Icon=file_tools_section
 Categories=X-MandrivaLinux-System-FileTools;System;
 EOF
-)
 
 %find_lang %name
 
@@ -97,6 +95,6 @@ rm -rf $RPM_BUILD_ROOT
 %doc README COPYING ChangeLog
 %doc docs/help.txt
 %{_bindir}/*
-%{_libdir}/menu/*
+%{_datadir}/applications/*
 %_libdir/emelfm/plugins/*.so
  
