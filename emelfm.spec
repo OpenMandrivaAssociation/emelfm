@@ -1,4 +1,4 @@
-%define rel 2
+%define rel 3
 %define name emelfm
 %define extra_ver 1
 %define rversion 0.9.2
