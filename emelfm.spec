@@ -1,15 +1,13 @@
-%define rel 4
 %define name emelfm
 %define extra_ver 1
 %define rversion 0.9.2
 %define version 0.9.2.%{extra_ver}
 %define extra_ver 1
-%define release %mkrel %{rel}
 
 Summary: File manager using the two-panel design and Gtk+
 Name: %{name}
 Version: %{version}
-Release: %{release}
+Release: 5
 License: GPL
 Group: File tools
 Source: %{name}-%{rversion}-elm%{extra_ver}.tar.bz2 
