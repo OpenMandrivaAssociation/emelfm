@@ -1,21 +1,20 @@
 %define name emelfm
 %define extra_ver 1
 %define rversion 0.9.2
-%define version 0.9.2.%{extra_ver}
-%define extra_ver 1
 
 Summary: File manager using the two-panel design and Gtk+
-Name: %{name}
-Version: %{version}
+Name:    emelfm
+Version: 0.9.2.%{extra_ver}
 Release: 5
 License: GPL
 Group: File tools
 Source: %{name}-%{rversion}-elm%{extra_ver}.tar.bz2 
 Url: http://www.havens.de/elm/emelfm.html
-BuildRoot: %{_tmppath}/%{name}-buildroot
 BuildRequires: gtk+-devel >= 1.2
 Requires: gtk+ >= 1.2
 Requires: xterm
+
+%define debug_package %{nil}
 
 %description
 emelFM is a file manager that implements the popular two-panel design. It
@@ -35,8 +34,6 @@ Features:
      o Runtime loadable plugins 
 
 %prep
-rm -rf $RPM_BUILD_ROOT
-
 %setup -q -n %{name}-%{rversion}-elm%{extra_ver}
 ##patch0 -p1
 
@@ -128,7 +125,7 @@ rm -rf $RPM_BUILD_ROOT
 - update Patch for correct doc location
 - adjust echo script
 
-* Mon Jun 23 2003 Götz Waschk <waschk@linux-mandrake.com> 0.9.2-4mdk
+* Mon Jun 23 2003 GÃ¶tz Waschk <waschk@linux-mandrake.com> 0.9.2-4mdk
 - from Charles A Edwards <eslrahc@bellsouth.net>
   - emelfm-0.9.2--mdk-Makefile-common.patch
   - put plugins in _libdir not _datadir
