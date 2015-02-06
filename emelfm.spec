@@ -5,7 +5,7 @@
 Summary:	File manager using the two-panel design and Gtk+
 Name:		emelfm
 Version:	0.9.2.%{extra_ver}
-Release:	6
+Release:	7
 License:	GPLv2+
 Group:		File tools
 Url:		http://www.havens.de/elm/emelfm.html
