@@ -8,7 +8,7 @@ Version:	0.9.2.%{extra_ver}
 Release:	7
 License:	GPLv2+
 Group:		File tools
-Url:		http://www.havens.de/elm/emelfm.html
+Url:		https://www.havens.de/elm/emelfm.html
 Source0:	%{name}-%{rversion}-elm%{extra_ver}.tar.bz2
 BuildRequires:	pkgconfig(gtk+)
 Requires:	gtk+
