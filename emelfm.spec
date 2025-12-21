@@ -10,6 +10,7 @@ License:	GPLv2+
 Group:		File tools
 Url:		https://www.havens.de/elm/emelfm.html
 Source0:	%{name}-%{rversion}-elm%{extra_ver}.tar.bz2
+BuildRequires:	make
 BuildRequires:	pkgconfig(gtk+)
 Requires:	gtk+
 Requires:	xterm
